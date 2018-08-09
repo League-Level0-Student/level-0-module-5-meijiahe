@@ -15,10 +15,21 @@ String name=JOptionPane.showInputDialog(null,"What is your name?");
 		// 2. Print upper case name to the console using .toUpperCase()
 		//    Run your program to see that this works.
 name.toUpperCase();
-System.out.println(toUpperCase());
+System.out.println(name.toUpperCase());
 		// 3. Loop through each character of the name (steps 4 - 6).
 		//    HINT: Use .length() to determine the number of characters in the String.
-
+for(int i=0;i<name.length();i++) {
+	String salmon=name.substring(i,i+1);
+	if(i%2==0) {
+		// even
+		salmon=salmon.toUpperCase();
+		
+	}
+	else {
+		salmon=salmon.toLowerCase();
+	}
+	goofyName+=salmon;
+}
 			// 4. Create a String variable to store the next character of the name
 			//    using .substring(start, end)
 			//    HINT: replace 'start' and 'end' to get String with character at i 
@@ -34,9 +45,8 @@ System.out.println(toUpperCase());
 
 	}
 
-	private static char[] toUpperCase() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+
+	
 }
 
